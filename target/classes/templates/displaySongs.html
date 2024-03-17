@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/displaySongs.css}">
+<style type="text/css">
+   iframe{
+   height:200px;
+   width:700px;
+   }
+   .background-image {
+    position: absolute; /* Position the image absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the image width to cover the entire viewport */
+    height: 100%; /* Set the image height to cover the entire viewport */
+    z-index: -1; /* Ensure the image is behind other content */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; 
+}
+</style>
+</head>
+<body>
+<div class="table-container">
+    <table border>
+        <thead>
+         <tr>
+            <th>Name</th>
+             <th>Artist</th>
+             <th>Genre</th>
+             <th>Play</th>
+         </tr>
+        </thead>
+        
+        <tbody>
+         <tr th:each="song:${songs}">
+              <td th:text="${song.name}"></td>
+              <td th:text="${song.artist}"></td>
+              <td th:text="${song.genre}"></td>
+              
+              
+              
+              <td class="audio-container">
+                <audio controls>
+                   <source th:src="${song.link}" type="audio/mpeg">
+                </audio>
+              </td>
+         </tr>
+        </tbody>
+    </table>
+</div>
+<img src="https://png.pngtree.com/png-vector/20220723/ourmid/pngtree-music-note-staves-png-image_5998977.png">
+</body>
+</html>

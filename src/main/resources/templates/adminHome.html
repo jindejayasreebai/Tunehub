@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/adminHome.css}">
+
+<style>
+  @keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  h1 {
+    font-size: 42px; 
+    margin: 20px auto; 
+    color: deeppink; 
+    text-align: center; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    border-bottom: 3px solid #333; 
+    padding-bottom: 10px; 
+    animation: slideIn 0.8s ease-out;
+    max-width: 800px;
+    line-height: 1.3;
+  }
+</style>
+
+</head>
+
+<body>
+
+<h1>
+    Admin Home
+</h1>
+
+
+
+<a href="newSong">Add a new song</a>
+<br>
+<a href="viewSongs">View all songs</a>
+<br>
+
+<a href="createPlaylist">Create Playlist</a>
+<br>
+
+<a href="viewPlaylists">View all Playlists</a>
+
+</body>
+</html>

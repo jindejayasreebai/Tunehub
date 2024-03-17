@@ -1,0 +1,73 @@
+/* Reset default margin and padding */
+body, form, label, input, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply box-sizing border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBzBrfeo2EpIYeYZ8JcscZv6Xs_H_eaFR63A&usqp=CAU');
+    background-repeat:no repeat;
+       
+}
+
+/* Style the form container */
+form {
+    max-width: 400px;
+    margin: 20px auto; /* Center the form horizontally */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Style the form labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Style the form inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the checkbox container */
+.checkbox-container {
+    margin-bottom: 15px;
+}
+
+/* Style the checkboxes */
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    width: 100%;
+    background-color: #45a049;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}

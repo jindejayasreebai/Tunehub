@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/customerHome.css}">
+</head>
+<body>
+
+<h1>Customer Home</h1>
+  <div   th:unless="${isPremium}" class="non-premium">
+
+    <a href="pay"  style="margin-right: 10px;margin-bottom:20px; color:deeppink">Get premium</a>
+    <br>
+    <a href="logout"  style="margin-right: 10px;margin-bottom:20px;color:deeppink">LOGOUT</a>
+  </div>
+   
+  <div th:if="${isPremium}" class="premium">
+  <table border>
+        <thead>
+         <tr>
+            <th>Name</th>
+             <th>Artist</th>
+             <th>Genre</th>
+             <th>Play</th>
+         </tr>
+        </thead>
+        
+        <tbody>
+         <tr th:each="song:${songs}">
+              <td th:text="${song.name}"></td>
+              <td th:text="${song.artist}"></td>
+              <td th:text="${song.genre}"></td>
+              <td >
+                <audio controls ="custom-audio">
+                   <source th:src="${song.link}" type="audio/mpeg">
+                </audio>
+              </td>
+         </tr>
+        </tbody>
+    </table>
+  
+  
+  </div>
+  
+</body>
+</html>

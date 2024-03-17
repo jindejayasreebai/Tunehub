@@ -1,0 +1,61 @@
+@charset "ISO-8859-1";
+/* Resetting default margin and padding */
+body, h1, form, label, input {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+/* Styling for the heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Styling for the form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Styling for labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling for inputs */
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styling for submit button */
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
